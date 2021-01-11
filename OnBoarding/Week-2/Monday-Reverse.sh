@@ -1,6 +1,7 @@
 #!/bin/bash
 echo -e "\033[31;7mThe Given arguments in Reverse Orderd\e[0m";
-printf "%s\n" "$@" | tac
+printf "%s\n" "$@" | tac -r -s 'x\|[^x]'
+echo
 echo "------- THE END ------"
 current_date=$(date | gawk '{print $2 , $3 , $6 }')
 current_time=$(date | gawk '{print $4 , $5 }')
